@@ -8,4 +8,6 @@ for i in range(n-1):
         if arr[j] > arr[i]:
             arr[j], arr[j+1] = arr[j+1], arr[j]
             swapped = True
+    if not swapped:
+        break
 print(arr)
