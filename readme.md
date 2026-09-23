@@ -1,4 +1,4 @@
-A Repsoitory for slef motivation for learning DSA, Promoting daily commits to boost consistency and commitment.
+A Repsoitory for self motivation for learning DSA, Promoting daily commits to boost consistency and commitment.
 
 Day 1:
 completed - Array: Sorting algorithm - Bubble sort

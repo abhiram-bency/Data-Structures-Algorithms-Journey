@@ -1,15 +1,15 @@
-def mergeSort(arr):
-    if len(arr) <= 1:
+def mergesort(arr):
+    if len(arr)<=1:
         return arr
 
     mid = len(arr) // 2
-    leftHalf = arr[:mid]
-    rightHalf = arr[mid:]
+    lefthalf = arr[:mid]
+    righthalf = arr[mid:]
 
-    sortedLeft = mergeSort(leftHalf)
-    sortedRight = mergeSort(rightHalf)
+    sorted_left = mergesort(lefthalf)
+    sorted_right= mergesort(righthalf)
 
-    return merge(sortedLeft, sortedRight)
+    return merge(sorted_left, sorted_right)
 
 def merge(left, right):
     result = []
@@ -22,12 +22,10 @@ def merge(left, right):
         else:
             result.append(right[j])
             j += 1
-
+    
     result.extend(left[i:])
     result.extend(right[j:])
 
     return result
-
-unsortedArr = [3, 7, 6, -10, 15, 23.5, 55, -13]
-sortedArr = mergeSort(unsortedArr)
-print("Sorted array:", sortedArr)
+arr = [64, 34, 25, 12, 22, 11, 90, 5]
+print(mergesort(arr))
