@@ -1,12 +1,9 @@
-digit = 121
-def palindrome(s):
-    s= str(digit)
-    left = 0
-    right = len(s) - 1
-    while left<right:
-        if s[left] != s[right]:
-            return False
-        left+=1
-        right-=1
-    return True
-print(palindrome(digit))
+s = "aabbcde"
+def nonrepeat(s):
+    pos = 1
+    for i in range(1, len(s)):
+        if s[i] != s[pos-1]:
+            s[pos] = s[i]
+            pos+=1
+    return s[:pos]
+print(nonrepeat(s))
