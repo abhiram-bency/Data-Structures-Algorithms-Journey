@@ -1,9 +1,9 @@
-arr = [1,1,2,2,3]
-def removeDuplicates(arr):
+s = "hello"
+def solve(s):
     i=0
-    for j in range(1, len(arr)):
-        if arr[i] != arr[j]:
-            i+=1
-            arr[i] = arr[j]
-    return arr[:i+1]
-print(removeDuplicates(arr))
+    sum = 0
+    for j in range(1, len(s)):
+        sum += abs(ord(s[i])-ord(s[j]))
+        i+=1
+    return sum
+print(solve(s))
