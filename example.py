@@ -1,10 +1,10 @@
-s = "abc"
-k=3
-def reverse(s,k):
-    l = list(s)
-    i=0
-    while i<len(l):
-        l[i:i+k] = l[i:i+k][::-1]
-        i+=2*k
-    return "".join(l)
-print(reverse(s,k))
+s = "Let's take LeetCode contest"
+
+def reverse(s):
+    l=s.split()
+    i = 0
+    for i in range(0, len(l)):
+        l[i] = l[i][::-1]
+    return " ".join(l)
+print(s)
+print(reverse(s))
