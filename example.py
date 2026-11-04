@@ -1,10 +1,12 @@
-s = "Let's take LeetCode contest"
+s = "anagram"
+t = "nagarama"
 
-def reverse(s):
-    l=s.split()
-    i = 0
-    for i in range(0, len(l)):
-        l[i] = l[i][::-1]
-    return " ".join(l)
-print(s)
-print(reverse(s))
+def anagram(s,t):
+    d1 = {}
+    d2 = {}
+    for i in s:
+        d1[i] = d1.get(i,0)+1
+    for i in t:
+        d2[i] = d2.get(i,0)+1
+    return d1==d2
+print(anagram(s,t))
